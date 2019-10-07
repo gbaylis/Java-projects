@@ -1,0 +1,125 @@
+/* 
+Java Switch statement, created on Oct. 7th, 2019
+Ordering Breakfast
+
+*/
+import java.util.Scanner;
+
+public class Main {
+    
+    public static void main(String[] args) {
+        
+        Scanner input = new Scanner(System.in);
+        
+        // create a variable for repeated questions / statements
+        String your_answer = "> Type your answer here...";
+        
+    // explain the breakfast drink options
+    System.out.println("> Good morning, what do you want for breakfast");
+    System.out.println("> What do you want to drink for breakfast?");
+    System.out.println("> Type (T) or (t) for tea");
+    System.out.println("> Type (C) or (c) for coffee");
+    System.out.println("> Type (J) or (j) for orange juice");
+    System.out.println("> or type any other key of you do not want something to drink with breakfast");
+    // the line, where the user types their answer
+    System.out.println(your_answer);
+    
+    // name the input line string
+    String drink = input.nextLine();
+    
+    switch(drink) {
+        // nested switch
+        case "T":
+        case "t":
+            System.out.println(" You will have tea with your breakfast");
+            break;
+            
+        case "C":
+        case "c":
+            System.out.println(" The coffee will be ready soon, there is cream and sugare if you want it");
+            break;
+            
+        case "J":
+        case "j":
+            System.out.println(" The orange juice is on the table");
+            break;
+            
+        default:
+            System.out.println(" Okay, let me know if you change your mind");
+            
+    }   
+    
+            // ask the user how they want their eggs
+    System.out.println("> How do you want your eggs cooked?");
+    System.out.println("> Type (O) or (o) for an omelet");
+    System.out.println("> Type (S) or (s) for scrambled");
+    System.out.println("> Type (U) or (u) for sunny side up");
+    System.out.println("> or type any other key if you do not want eggs with your breakfast");
+    // the line, where the user types their answer
+    System.out.println(your_answer);
+    
+    // name the input line string
+    String egg = input.nextLine();
+    
+    // switch statement for the eggs
+    
+    switch(egg) {
+        // nested switch
+        case "O":
+        case "o":
+            System.out.println(" You will have an omelete with your breakfast");
+            break;
+            
+        case "S":
+        case "s":
+            System.out.println(" Good choice, I eat my eggs scrambled too");
+            break;
+            
+        case "U":
+        case "u":
+            System.out.println(" Your sunny side up eggs will be ready soon");
+            break;
+            
+        default:
+            System.out.println(" Thats okay, we can find you something else to eat");
+    
+    }
+        
+        // the side dishes
+        
+        System.out.println("> For breakfast side dishes, we have some options?");
+    System.out.println("> Type (B) or (b) for bacon");
+    System.out.println("> Type (S) or (s) for sausage");
+    System.out.println("> Type (H) or (h) for ham");
+    System.out.println("> or type any other key if would rather have toast");
+    // the line, where the user types their answer
+    System.out.println(your_answer);
+    
+    // name the input line string
+    String side = input.nextLine();
+    
+    // the side dish switch statement
+    
+    switch(side) {
+        // nested switch
+        case "B":
+        case "b":
+            System.out.println(" Don't you love the smell of bacon in the morning?");
+            break;
+            
+        case "S":
+        case "s":
+            System.out.println(" I have the sausage links and patties, you can have one of each");
+            break;
+            
+        case "H":
+        case "h":
+            System.out.println(" ham it is");
+            break;
+            
+        default:
+            System.out.println(" If you want toast, the bread & toaster is in the kitchen");
+    
+        }   
+    }
+} 
