@@ -1,0 +1,307 @@
+/******************************************************************************
+
+gbaylis
+sci fi game / Oct 16th 2019 / Java
+
+uses the char and switch statement
+
+*******************************************************************************/
+import java.util.Scanner;
+public class Main {
+  //get input with the Java's Scanner Class
+  static Scanner sc = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+	    
+	// string variables
+String none_correct = "> Type any key that is not a, b, c if none of the options are correct";	
+String lower_case = "> Please use lower case letters";
+
+		
+System.out.println("In this text based game, you pilot a space ship in the year 3022, making planet to planet cargo deliveries " );
+System.out.println(" You have landed on planet X2, to refuel, and find your next delivery gig ");
+
+// create a scanner object called astro, to ask for user name
+Scanner astro1 = new Scanner(System.in);
+System.out.println("> What is your name (for the astronaut character)?... ");
+
+String your_name = astro1.nextLine();
+
+// ask the user to name their ship
+Scanner astro2 = new Scanner(System.in);
+System.out.println("> Choose a name for your space ship " + your_name + " ?...");
+String your_ship = astro2.nextLine();
+
+// I use these lines of dots to create space between the lines of text
+System.out.println("........");
+System.out.println("  ....");
+
+System.out.println(your_name + " has landed their ship on planet X2, refered to as \"the truck stop of the universe\" ");
+System.out.println(your_ship + " is parked in a landing bay, the next thing to do is get fuel for your ship");
+System.out.println(your_name + " goes to the nearby kiosk to order fuel from a representative of the fuel depot");
+
+System.out.println("........");
+System.out.println("  ....");
+
+System.out.println(" You see the kiosk employee attempting to repair his android assistant");
+System.out.println(" He sees you approaching, looks up from his android and introduces himself as Kyle");
+System.out.println(" Kyle explains that something is wrong with the Operating System of his android");
+System.out.println(" and if you can help him repair the android, he will give you a discount on your purchase");
+System.out.println("........");
+System.out.println("  ....");
+
+// the user will be asked 3 questions about Java, a mini game to get a discount on the fuel purchase
+
+System.out.println(" Kyle's android uses an operating system written in Java, answer these questions to assist with the repairs");
+
+// the first Java quiz question, each question will be named q1, q2, q3......
+
+System.out.println("> Which of the following means, not equal to, in Java?...");
+System.out.println("> Type a and enter for !!");
+System.out.println("> Type b and enter for !="); // correct answer
+System.out.println("> Type c and enter for =/=");
+System.out.println(lower_case);
+System.out.println(none_correct);
+
+String q1 = sc.next();
+char a1 = q1.charAt(0);
+
+switch(a1) {
+   
+   case 'a':
+   System.out.println(" != means not equal to, in Java"); 
+        break;
+    
+    case 'b':
+    System.out.println(" != means not equal to, in Java"); 
+        break; 
+      
+    case 'c':
+    System.out.println(" != means not equal to, in Java"); 
+        break;  
+        
+    default:  
+    System.out.println(" != means not equal to, in Java"); 
+        break;  
+     
+}
+	System.out.println("........");
+	System.out.println("  ....");
+// the 2nd Java quiz question
+System.out.println("> In the Java language, what term would be used to describe 5.45?...");
+System.out.println("> Type a and enter for decimal");
+System.out.println("> Type b and enter for double"); // correct answer
+System.out.println("> Type c and enter for char");
+System.out.println(lower_case);
+System.out.println(none_correct);
+
+String q2 = sc.next();
+char a2 = q2.charAt(0);
+
+switch(a2) {
+   
+   case 'a':
+   System.out.println(" 5.45 would be a double, in Java"); 
+        break;
+    
+    case 'b':
+    System.out.println(" 5.45 would be a double, in Java"); 
+        break; 
+      
+    case 'c':
+    System.out.println(" 5.45 would be a double, in Java"); 
+        break;  
+        
+    default:  
+    System.out.println(" 5.45 would be a double, in Java"); 
+        break;  
+       
+    // the 3rd Java quiz question
+}   
+ 	System.out.println("........");
+ 	System.out.println("  ...."); 
+System.out.println("> In the Java language, what term would be used to describe true and false statements?...");
+System.out.println("> Type a and enter for boolean"); // correct answer
+System.out.println("> Type b and enter for string");
+System.out.println("> Type c and enter for falsehood");
+System.out.println(lower_case);
+System.out.println(none_correct);
+
+String q3 = sc.next();
+char a3 = q3.charAt(0);
+
+switch(a3) {
+   
+   case 'a':
+   System.out.println(" boolean is the term for true and false statements"); 
+        break;
+    
+    case 'b':
+    System.out.println(" boolean is the term for true and false statements"); 
+        break; 
+      
+    case 'c':
+    System.out.println(" boolean is the term for true and false statements"); 
+        break;  
+        
+    default:  
+    System.out.println(" boolean is the term for true and false statements"); 
+        break;  
+        
+}
+    System.out.println("........");
+	System.out.println("  ....");
+	
+	System.out.println(" Kyle was able to fix his android");
+	System.out.println(" \" Thank you for your help\"");
+	// if the user gets all 3 questions correct, they get a 15% discount on fuel
+	if (a1 == 'b' && a2 == 'b' && a3 == 'a') {
+	    System.out.println(" \"I can give you a 15% discount on fuel\", says Kyle");
+    // if the user got any 2 of the questions correct, user gets a 10% discount	    
+	} else if (a1 == 'b' && a2 == 'b' ||  a1 == 'b' && a3 == 'a' || a2 == 'b' && a3 == 'a') {
+	    System.out.println(" \"I can give you a 10% discount on fuel\", says Kyle");
+	// if the user got 1 or 0 of the questions correct, user gets a 5% discount   
+	} else {
+	    System.out.println(" \"I can give you a 5% discount on fuel\", says Kyle");
+	}
+	
+	System.out.println(" You order the fuel for " + your_ship + " from Kyle");
+    System.out.println(" The recently repaired android will refuel your ship");
+    System.out.println(" Next, you will go to the merchant's office to find your next delivery gig");
+    
+  System.out.println("........");
+	System.out.println("  ....");
+	
+	System.out.println(" You arrive at the merchant's office, and inquire about any job openings, especially delivery gigs");
+	System.out.println(" An alien female who goes by the handle 'Fire Star' sits behind the desk & tells you there are in fact some delveries headed towards the Milky Way");
+	System.out.println(" \" and if it is okay, she would like to ask you some interview questions, to see which job would best suit you\", says Fire Star.");
+	System.out.println(" You tell Fire Star you are ready to answer the questions");
+	    
+  System.out.println("........");
+	System.out.println("  ....");
+	
+	// 3 quiz questions about planets, the # of correct answers will effect the delivery job the user gets
+	// the 4th question in the game
+	
+	System.out.println("> Which of these 2 planets is between Earth and the sun?...");
+    System.out.println("> Type a for Mercury and Venus"); // correct answer
+    System.out.println("> Type b for Mars and Jupiter");
+    System.out.println("> Type c for Saturn and Mars");
+    System.out.println(lower_case);
+    System.out.println(none_correct); 
+
+String q4 = sc.next();
+char a4 = q4.charAt(0);
+
+switch(a4) {
+   
+   case 'a':
+   System.out.println(" Mercury and Venus are the planets between Earth and the sun"); 
+        break;
+    
+    case 'b':
+    System.out.println(" Mercury and Venus are the planets between Earth and the sun"); 
+        break; 
+      
+    case 'c':
+    System.out.println(" Mercury and Venus are the planets between Earth and the sun"); 
+        break;  
+        
+    default:  
+    System.out.println(" Mercury and Venus are the planets between Earth and the sun"); 
+        break;  
+        
+     
+}
+    System.out.println("........");
+	  System.out.println("  ....");
+    // the 5th question in the game
+    System.out.println("> In Earth's solar system, the asteroid belt is between the orbit of which 2 planets?...");
+    System.out.println("> Type a for Earth and Venus ");
+    System.out.println("> Type b for Uranus and Neptune");
+    System.out.println("> Type c for Mars and Jupiter"); // correct answer
+    System.out.println(lower_case);
+    System.out.println(none_correct);
+
+String q5 = sc.next();
+char a5 = q5.charAt(0);
+
+switch(a5) {
+   
+   case 'a':
+   System.out.println(" The asteroid belt is between the orbit of Mars and Jupiter"); 
+        break;
+    
+    case 'b':
+    System.out.println(" The asteroid belt is between the orbit of Mars and Jupiter"); 
+        break; 
+      
+    case 'c':
+    System.out.println(" The asteroid belt is between the orbit of Mars and Jupiter"); 
+        break;  
+        
+    default:  
+    System.out.println(" The asteroid belt is between the orbit of Mars and Jupiter"); 
+        break;  
+}
+
+ // the 6th question in the game
+    System.out.println("> Which of the 2 planets are gas giants?...");
+    System.out.println("> Type a for Jupiter and Saturn "); // correct answer
+    System.out.println("> Type b for Mars and Uranus");
+    System.out.println("> Type c for Mercury and Venus"); 
+    System.out.println(lower_case);
+    System.out.println(none_correct); 
+
+String q6 = sc.next();
+char a6 = q6.charAt(0);
+
+switch(a6) {
+   
+   case 'a':
+   System.out.println(" Jupiter and Saturn are gas giant planets");
+        break;
+    
+    case 'b':
+    System.out.println(" Jupiter and Saturn are gas giant planets"); 
+        break; 
+      
+    case 'c':
+    System.out.println(" Jupiter and Saturn are gas giant planets"); 
+        break;  
+        
+    default:  
+    System.out.println(" Jupiter and Saturn are gas giant planets"); 
+        break;  
+}
+
+System.out.println("........");
+	System.out.println("  ....");
+	// the user will be offered a job, based on how they answered
+	System.out.println(" Fire Star takes your answers and is looking something up on her computer");
+	System.out.println(" " + your_name + " \" Here is the job opening I have available to you now\", says Fire Star");
+	// if the user gets all 3 questions correct, they get the best paying job
+	if (a4 == 'a' && a5 == 'c' && a6 == 'a') {
+	    System.out.println(" \"Delivering a shipment of spices to Earth, pays 5000 credits\", says Fire Star");
+    // if the user got any 2 of the questions correct, an average paying job    
+	} else if (a4 == 'a' && a5 == 'c' ||  a4 == 'a' && a6 == 'a' || a5 == 'c' && a6 == 'a') {
+	    System.out.println(" \"Delivering fuel to a space station that orbits Saturn, pays 3000 credits\", says Fire Star");
+	// if the user got 1 or 0 of the questions correct, user gets a low paying job  
+	} else {
+	    System.out.println(" \"Delivering tools to a space colony on Pluto, pays 1500 credits \", says Fire Star");
+	}
+	
+	System.out.println(" You accept the job offer, and Fire Star orders the cargo to be loaded onto the " + your_ship);
+    System.out.println(" Fire Star suggests you help yourself to the refreshments in the lobby while you wait for the cargo");
+    
+    // ask the user to suggest a new name for the planet X2
+    Scanner planet = new Scanner(System.in);
+    System.out.println(" " + your_name + " \" If you were to rename this planet, what would you call it?\", asks Fire Star");
+    
+    System.out.println(" " + your_name + " What would you rename planet X2?...");
+    
+    String my_planet = planet.nextLine();
+    System.out.println(" You tell Fire Star you would rename this planet " + my_planet);
+    }
+
+	}
