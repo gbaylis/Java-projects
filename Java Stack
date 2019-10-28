@@ -1,16 +1,19 @@
-public class Main {
-    public static void main(String[] args) {
-        // name, age , college major, gpa
-        Person person1 = new Person("Anna Kurtz", "18", "computer science", "3.2");
-        Person person2 = new Person("Chris Jacks", "20", "chemistry", "3.0");
-        
-        PersonStack stack = new PersonStack();
-        
-        stack.push(person1);
-        stack.push(person2);
-        
-        System.out.println(stack.pop().toString());
-        System.out.println(stack.pop().toString());
-        
+public class Person {
+    // name, age, college major and gpa, set to private
+    private String name;
+    private String age;
+    private String major;
+    private String gpa;
+    
+    public Person(String name, String age, String major, String gpa) {
+        this.name = name;
+        this.age = age;
+        this.major = major;
+        this.gpa = gpa;
+    }
+    
+    public String toString() {
+    // return a statement that tells the information about the student    
+        return "Student's Name: " + this.name + " Age: " + this.age + " college major: " + this.major + " gpa: " + this.gpa;
     }
 }
