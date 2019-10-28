@@ -1,0 +1,16 @@
+public class Main {
+    public static void main(String[] args) {
+        // name, age , college major, gpa
+        Person person1 = new Person("Anna Kurtz", "18", "computer science", "3.2");
+        Person person2 = new Person("Chris Jacks", "20", "chemistry", "3.0");
+        
+        PersonStack stack = new PersonStack();
+        
+        stack.push(person1);
+        stack.push(person2);
+        
+        System.out.println(stack.pop().toString());
+        System.out.println(stack.pop().toString());
+        
+    }
+}
