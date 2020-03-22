@@ -3,7 +3,7 @@
 gbaylis
 sci fi game / Oct 16th 2019 / Java
 
-uses the char and switch statement
+uses the char and switch statement.   
 
 *******************************************************************************/
 import java.util.Scanner;
