@@ -2,9 +2,7 @@
 
 gbaylis
 sci fi game | Java
-
-uses the char and switch statement.   
-
+The char and switch statement.   
 *******************************************************************************/
 import java.util.Scanner;
 public class Main {
